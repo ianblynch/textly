@@ -1,3 +1,3 @@
-export default function() {
+export default textly = function() {
     console.log('textly')
 }
