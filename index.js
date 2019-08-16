@@ -1,1 +1,3 @@
-console.log('textly')
+export default function() {
+    console.log('textly')
+}
