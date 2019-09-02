@@ -63,7 +63,7 @@ function textlyInline(state, silent) {
 
   token         = state.push('css_open', 'span', 1);
   token.markup  = match.string.slice(2, match.string.length-2);
-  token.attrs = [['class', match.string.slice(2, match.string.length-2)]]
+  token.attrs = [['class', match.string.slice(2, match.string.length-2)], ['textly-element', 'inline']]
 
   token         = state.push('text', '', 0);
   token.content = content.replace(UNESCAPE_RE, '$1');
