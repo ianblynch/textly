@@ -10,7 +10,7 @@ const regexIndexOf = function(str,regex) {
 // same as UNESCAPE_MD_RE plus a space
 var UNESCAPE_RE = /\\([ \\!"#$%&'()*+,.\/:;<=>?@[\]^_`{|}~-])/g;
 const leftSquareBracketUTF8 = 0x5B
-const cssRegex = /\[\[[a-zA-Z\-][a-zA-Z0-9\-]{1,25}\]\]/
+const cssRegex = /\[\[[a-zA-Z\-][a-zA-Z0-9\- ]{1,200}\]\]/
 
 function textlyInline(state, silent) {
   var found,
@@ -26,7 +26,6 @@ function textlyInline(state, silent) {
   state.pos = start + 1;
 
   while (state.pos < max) {
-
     if (state.src.charCodeAt(state.pos) === leftSquareBracketUTF8/* [ */  && state.src.charCodeAt(state.pos +1) === leftSquareBracketUTF8) {
       let string9 = state.src.slice(state.pos, state.pos + 200)
       let stringMatch = {bool: false, string: ''}
