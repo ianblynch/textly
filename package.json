@@ -1,11 +1,17 @@
 {
   "name": "textly",
   "version": "1.0.0",
-  "description": "",
+  "description": "A plugin for markdown-it that wraps content in spans with one or more space-delimited css classes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "markdown"
+  ],
+  "homepage": "https://github.com/ianblynch/textly",
   "author": "ianblynch@gmail.com",
   "license": "ISC"
 }
