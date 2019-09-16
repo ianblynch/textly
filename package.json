@@ -13,5 +13,6 @@
   ],
   "homepage": "https://github.com/ianblynch/textly",
   "author": "ianblynch@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
