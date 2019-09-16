@@ -7,7 +7,6 @@ const regexIndexOf = function(str,regex) {
   return {firstIndex: firstIndex, lastIndex: lastIndex}
 }
 
-// same as UNESCAPE_MD_RE plus a space
 var UNESCAPE_RE = /\\([ \\!"#$%&'()*+,.\/:;<=>?@[\]^_`{|}~-])/g;
 const leftSquareBracketUTF8 = 0x5B
 const cssRegex = /\[\[[a-zA-Z\-][a-zA-Z0-9\- ]{1,200}\]\]/
@@ -20,7 +19,7 @@ function textlyInline(state, silent) {
       max = state.posMax,
       start = state.pos;
   if (state.src.charCodeAt(start) !== leftSquareBracketUTF8/* ~ */) { return false; }
-  if (silent) { return false; } // don't run any pairs in validation mode
+  if (silent) { return false; }
   if (start + 2 >= max) { return false; }
 
   state.pos = start + 1;
@@ -76,14 +75,7 @@ function textlyInline(state, silent) {
   return true;
 }
 
-
-
-// function textlyBlockTyping(state, startLine) {
-// console.log(state)
-// }
-
 module.exports = function textly_plugin(md) {
-  // md.block.ruler.after('paragraph', 'typing', textlyBlockTyping)
   md.inline.ruler.after('entity', 'css', textlyInline);
 };
 
