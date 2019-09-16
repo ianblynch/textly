@@ -1,6 +1,6 @@
 {
   "name": "textly",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin for markdown-it that wraps content in spans with one or more space-delimited css classes.",
   "main": "index.js",
   "scripts": {
